@@ -5,7 +5,7 @@
       "description": "Desenvolvimento de site",
       "type": "income",
       "category": "Venda",
-      "price": 14000,
+      "price": 22000,
       "createdAt": "2024-10-16T14:30:04.274Z"
     },
     {
@@ -13,8 +13,16 @@
       "description": "Sushi",
       "type": "outcome",
       "category": "Alimentação",
-      "price": 8900,
+      "price": 89,
       "createdAt": "2024-10-16T14:15:04.274Z"
+    },
+    {
+      "id": 3,
+      "description": "Curso Rocketseat",
+      "type": "outcome",
+      "category": "Educação",
+      "price": 1980,
+      "createdAt": "2024-08-10T14:15:04.274Z"
     }
   ]
 }
