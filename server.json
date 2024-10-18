@@ -23,6 +23,30 @@
       "category": "Educação",
       "price": 1980,
       "createdAt": "2024-08-10T14:15:04.274Z"
+    },
+    {
+      "description": "Desenvolvimento de App",
+      "price": 10000,
+      "category": "Venda",
+      "type": "income",
+      "createdAt": "2024-10-18T14:12:06.547Z",
+      "id": 4
+    },
+    {
+      "description": "Deu certo",
+      "price": 19,
+      "category": "Asei la",
+      "type": "outcome",
+      "createdAt": "2024-10-18T14:36:04.593Z",
+      "id": 5
+    },
+    {
+      "description": "Teste",
+      "price": 1,
+      "category": "1",
+      "type": "outcome",
+      "createdAt": "2024-10-18T14:38:17.252Z",
+      "id": 6
     }
   ]
 }
