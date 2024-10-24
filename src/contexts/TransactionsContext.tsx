@@ -4,7 +4,7 @@ import { api } from "../lib/axios";
 interface Transaction {
   id: number;
   description: string;
-  type: 'income' | 'outcome';
+  type: "income" | "outcome";
   price: number;
   category: string;
   createdAt: string;
@@ -14,7 +14,7 @@ interface CreateTransactionInput {
   description: string;
   price: number;
   category: string;
-  type: 'income' | 'outcome';
+  type: "income" | "outcome";
 }
 
 interface TransactionContextType {
@@ -33,12 +33,12 @@ export function TransactionsProvider({ children }: TransactionProviderProps) {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
 
   async function fetchTransactions(query?: string) {
-    const response = await api.get('/transactions', {
+    const response = await api.get("/transactions", {
       params: {
-        _sort: 'createdAt',
-        _order: 'desc',
+        _sort: "createdAt",
+        _order: "desc",
         q: query,
-      }
+      },
     });
 
     setTransactions(response.data);
@@ -47,25 +47,27 @@ export function TransactionsProvider({ children }: TransactionProviderProps) {
   async function createTransaction(data: CreateTransactionInput) {
     const { description, price, category, type } = data;
 
-    const response = await api.post('/transactions', {
-        // corpo da requisicao
-        description,
-        price,
-        category,
-        type,
-        createdAt: new Date(),
-      })
+    const response = await api.post("/transactions", {
+      // corpo da requisicao
+      description,
+      price,
+      category,
+      type,
+      createdAt: new Date(),
+    });
 
-      setTransactions(state => [response.data, ...state]);
+    setTransactions((state) => [response.data, ...state]);
   }
 
   useEffect(() => {
     fetchTransactions();
-  }, [])
+  }, []);
 
   return (
-    <TransactionsContext.Provider value={{ transactions, fetchTransactions, createTransaction }}>
+    <TransactionsContext.Provider
+      value={{ transactions, fetchTransactions, createTransaction }}
+    >
       {children}
     </TransactionsContext.Provider>
-  )
+  );
 }
