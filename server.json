@@ -47,6 +47,22 @@
       "type": "outcome",
       "createdAt": "2024-10-18T14:38:17.252Z",
       "id": 6
+    },
+    {
+      "description": "Desc",
+      "price": 100,
+      "category": "Cat",
+      "type": "outcome",
+      "createdAt": "2024-10-29T14:53:51.923Z",
+      "id": 7
+    },
+    {
+      "description": "Pizza do Dimmy",
+      "price": 12600,
+      "category": "Comida",
+      "type": "outcome",
+      "createdAt": "2024-10-29T15:08:29.520Z",
+      "id": 8
     }
   ]
 }
